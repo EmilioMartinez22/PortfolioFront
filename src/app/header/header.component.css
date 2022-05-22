@@ -1,0 +1,83 @@
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    
+  }
+  
+  .header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+
+}
+
+.header .logo
+{
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.header ul
+{
+    position: relative;
+    display: flex;
+}
+.header ul li
+{
+    position: relative;
+    list-style: none;
+}
+.header ul li a 
+{
+    position: relative;
+    display: inline-block;
+    margin: 0 15px;
+    text-decoration: none;
+}
+.titulo
+{
+    color: #fff;
+    margin-bottom: 0px;
+    font-size: 24px;
+}
+.fa-brands
+{
+    width: 40px;
+    height: 40px;
+}
+
+
+
+
+.bottom {
+    background-color: #fff;
+    padding: 20px 100px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+.bottom .logo
+{
+    color: #111;  
+}
+.bottom ul .titulo
+{
+    color: #111; 
+}
+.toggle
+{
+    justify-content: center;
+    align-items: center;
+}
+
+

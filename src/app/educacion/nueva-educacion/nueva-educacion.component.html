@@ -1,0 +1,38 @@
+<div class="formulario">
+    <div class="cuerpo-fomulario">
+        <h3>Nueva Educacion</h3>
+    <form (ngSubmit)="CrearEducacion()" novalidate #f="ngForm">
+        <div class="form-group">
+            <label class="label" for="empresa">Institucion</label>
+            <input type="text" class="formcontrol" id="nombre" name="nombre"
+            [(ngModel)]="nombre" required>
+        </div>
+        <div class="form-group">
+            <label class="label" for="descripcion">Descripcion</label>
+            <input type="text" class="formcontrol" id="descripcion" name="descripcion"
+            [(ngModel)]="descripcion" required>
+        </div>
+        <div class="form-group">
+            <label  class="label" for="imagenUrl">ImagenUrl</label>
+            <input type="text" class="formcontrol" id="imagenUrl" name="imagenUrl"
+            [(ngModel)]="imagenUrl" required>
+        </div>
+        <div class="form-group">
+            <label class="label" for="entrada">Año de ingreso</label>
+            <input type="number" class="formcontrol" id="entrada" name="entrada"
+            [(ngModel)]="entrada" required>
+        </div>
+        <div class="form-group">
+            <label class="label" for="salida">Año de Salida</label>
+            <input type="number" class="formcontrol" id="salida" name="salida"
+            [(ngModel)]="salida" required>
+        </div>
+        <mat-dialog-actions>
+        <button mat-button class=" enviar btn btn-outline-success btn-block" (click)="cancelar()" [disabled]="!f.valid">
+            <i class="fa-solid fa-plus"></i>  Enviar</button>
+        </mat-dialog-actions>
+       
+    </form>
+        <button mat-button class="cancelar btn btn-outline-danger btn-block" (click)="cancelar()">
+            <i class="fas fa-arrow-alt-circle-left"></i>  Cancelar</button>
+    </div>

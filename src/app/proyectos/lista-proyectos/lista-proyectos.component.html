@@ -1,0 +1,37 @@
+
+<section class="services">
+  <div class="headingwhite">
+    <h2>Experiencia</h2>
+  </div>
+  <div>
+    <div style="font-size:1.5rem; height: 80px;">
+        <span> AgendaLive</span>
+        <span class="example-spacer"></span>
+        <button mat-raised-button >Agregar experiencia</button>
+    </div>
+
+</div>
+
+  <div class="content">
+    
+          <div class="servicesBx" *ngFor="let proyecto of proyectos">
+            <img src="{{proyecto.imagenUrl}}">
+            <h2>{{proyecto.institucion}}</h2>
+            <p>{{proyecto.descripcion}}</p>
+            <p>{{proyecto.anio}}</p>
+            
+
+            <div class="botones">
+            <td *ngIf="isAdmin">
+              <button class="btn btn-outline-warning">
+              <i class="far fa-edit"></i></button></td>
+
+            <td *ngIf="isAdmin"><button class="btn btn-outline-danger" 
+              ><i class="far fa-trash-alt"></i></button></td>
+            </div>
+          </div>
+  </div>
+
+
+</section>
+

@@ -1,0 +1,67 @@
+.services
+{
+    padding: 5px;
+    background: #fff;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    
+}
+.headingwhite
+{
+    color: #fff;
+    
+}
+.services .content
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    flex-direction: row;
+
+}
+.services .content .servicesBx
+{
+
+    padding: 40px 20px;
+    background: #fff;
+    border-top: 2px;
+    border-left: 2px;
+    border-right:5px;
+    border-bottom: 5px;
+    border-color: #054132;
+    border-style: solid;
+    color: #111;
+    max-width: 340px;
+    margin: 20px;
+    text-align: center;
+    transition: 0.5s ;
+}
+.services .content .servicesBx:hover
+{
+    background: #ff5c;
+}
+
+
+
+.services .content .servicesBx img
+{
+    max-width: 200px;
+    max-height: 200px ;
+}
+.services .content .servicesBx h2
+{
+    font-size: 20px;
+    font-weight: 600px;
+}
+.botones
+{
+    align-self: center;
+    margin-left: 27%;
+    margin-right: 25%;
+}
+.btn
+{
+    margin: 3px;
+}

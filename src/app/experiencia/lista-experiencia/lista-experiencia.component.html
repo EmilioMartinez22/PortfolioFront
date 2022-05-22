@@ -1,0 +1,44 @@
+<section class="services">
+  <div class="headingwhite">
+    <h2>Experiencia</h2>
+  </div>
+  <div>
+    <div style="font-size:1.5rem; height: 80px;">
+      <div style="font-size:1.5rem; height: 80px;">
+        <button mat-raised-button class="btn btn-outline-success btn-lg" (click)="agregarExperiencia()">
+          <i class="fa-solid fa-plus"></i>  Agregar Experiencia</button>
+    </div>
+    </div>
+
+</div>
+
+  <div class="content">
+    
+          <div class="servicesBx" *ngFor="let experiencia of experiencias">
+            <img src="{{experiencia.imagenUrl}}">
+            <h1>{{experiencia.empresa}}</h1>
+            <h2>{{experiencia.descripcion}}</h2>
+            <h3>{{experiencia.entrada}}</h3>
+            <h3>{{experiencia.salida}}</h3>
+
+            <div class="botones">
+            <td *ngIf="isAdmin">
+              <button class="btn btn-outline-warning" routerLink="/editarexperiencia/{{experiencia.id}}">
+              <i class="far fa-edit"></i></button></td>
+
+            <td *ngIf="isAdmin"><button class="btn btn-outline-danger" (click)="borrar(experiencia.id)"
+              ><i class="far fa-trash-alt"></i></button></td>
+            </div>
+          </div>
+  </div>
+
+
+</section>
+
+
+
+
+
+
+  
+  

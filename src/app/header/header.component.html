@@ -1,0 +1,94 @@
+<div class="header sticky" [ngClass]="isBottom ? 'bottom' : 'top'">
+
+    <a href="#" class="logo " >Portfolio</a>
+    <div class="toggle">
+    <ul>
+        <li><a href="#" class="titulo"><i class="fa-brands fa-discord"></i></a></li>
+        <li><a href="#" class="titulo"><i class="fa-brands fa-facebook"></i></a></li>
+        <li><a href="#" class="titulo"><i class="fa-brands fa-linkedin"></i></a></li>
+        <li><a href="#" class="titulo"><i class="fa-brands fa-github"></i></a></li>
+        <li><a href="#" class="titulo"><i class="fa-brands fa-instagram"></i></a></li>
+        <li *ngIf = "!isLogged">
+          <a class="titulo" routerLink="/login"><i class="fa-solid fa-right-to-bracket"></i>  Iniciar sesión</a>
+        </li>
+        <li *ngIf = "isLogged" (click)="onLogOut()">
+          <a  routerLink="/" class="titulo" ><i class="fa-solid fa-door-open"></i>  Cerrar sesión</a></li>
+    </ul>
+    </div>
+   
+</div>
+
+
+<!--
+    .header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.header .logo
+{
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.header ul
+{
+    position: relative;
+    display: flex;
+}
+.header ul li
+{
+    position: relative;
+    list-style: none;
+}
+.header ul li a 
+{
+    position: relative;
+    display: inline-block;
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+}
+.header ul li a span
+{
+    text-transform: uppercase;
+}
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+  }
+.bottom {
+    background-color: #fff;
+  }
+
+
+  .sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+  }
+  
+  .header {
+    height: 50px;
+  }
+  
+  .top {
+    background-color: blue;
+  }
+  
+  .bottom {
+    background-color: yellow;
+  }
+-->
