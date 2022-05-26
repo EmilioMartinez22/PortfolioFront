@@ -4,17 +4,17 @@
     <h3>Nueva Skill</h3>
 <form (ngSubmit)="CrearSkill()" novalidate #f="ngForm">
     <div class="form-group">
-        <label class="label" for="nombre">Nombre</label>
+        <label class="label" for="nombre">Nombre</label><br>
         <input type="text" class="formcontrol" id="nombre" name="nombre"
         [(ngModel)]="nombre" required>
     </div>
     <div class="form-group">
-        <label  class="label" for="imagenUrl">ImagenUrl</label>
+        <label  class="label" for="imagenUrl">ImagenUrl</label><br>
         <input type="text" class="formcontrol" id="imagenUrl" name="imagenUrl"
         [(ngModel)]="imagenUrl" required>
     </div>
     <div class="form-group">
-        <label class="label" for="porcentaje">Porcentaje</label>
+        <label class="label" for="porcentaje">Porcentaje</label><br>
         <input type="number" class="formcontrol" id="porcentaje" name="porcentaje"
         [(ngModel)]="porcentaje" required>
     </div>
@@ -23,7 +23,7 @@
         <i class="fa-solid fa-plus"></i>  Enviar</button>
     </mat-dialog-actions>
    
-</form>
+</form><br>
     <button mat-button class="cancelar btn btn-outline-danger btn-block" (click)="cancel()">
         <i class="fas fa-arrow-alt-circle-left"></i>  Cancelar</button>
 </div>

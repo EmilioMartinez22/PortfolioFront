@@ -1,20 +1,21 @@
-<section class="about">
+<section class="about" *ngFor ="let persona of personas">
+   <div class="responsive">
     <div class="heading">
-        <h2>Acera de mí</h2>
+        <h2>Acerca de mí</h2>
     </div>
     <div class="content">
         <div class="contentBx w50">
-               <h3>Soy desarrollador Web Fullstack.</h3>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                   Esse nulla fugit molestias deleniti odio atque animi maxime 
-                   architecto odit vero, provident, delectus facere excepturi a 
-                   voluptatem inventore quibusdam incidunt neque.<br>
-                   <br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio,
-                   iste veniam! Minima nostrum quis ab quidem totam atque similique 
-                   ex at aperiam. Enim mollitia id porro cum error molestiae tempore.</p> 
+               <h3>{{persona.descripcion}}</h3>
+               <div class="botones">
+                <td *ngIf="isAdmin">
+                  <button class="btn btn-outline-warning" routerLink="/editarpersona/{{persona.id}}">
+                <i class="far fa-edit"></i></button></td>
+                </div>
         </div>
         <div class="w50">
             <img src="https://img.freepik.com/free-photo/female-hands-typing-tablet-keyboard-dark-office-desk-with-schedule-book-decoration_67155-9367.jpg" class="img">
         </div>
     </div>
+    </div>
 </section>
+

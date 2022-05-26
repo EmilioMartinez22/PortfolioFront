@@ -1,16 +1,20 @@
-<div class="container">
+<div class="container" *ngFor ="let persona of personas">
 
     <div class="principal">
         <div class="card">
             <div class="imgBx">
-                <img src="https://image.shutterstock.com/image-photo/bearded-man-long-beard-brutal-260nw-623019197.jpg" alt="">    
+                <img src="{{persona.imagenUrl}}" alt="">    
             </div>
             <div class="content">
                     <div class="details">
-                        <h2>Emilio Ruben Martinez<br><span>FullStack Developer</span></h2>
+                        <h2>{{persona.nombre}}</h2>
+                        <div class="botones">
+                            <td *ngIf="isAdmin">
+                              <button class="btn btn-outline-warning" routerLink="/editarpersona/{{persona.id}}">
+                            <i class="far fa-edit"></i></button></td>
+                        </div>
                     </div>
             </div>
         </div>
     </div>
 
-</div>

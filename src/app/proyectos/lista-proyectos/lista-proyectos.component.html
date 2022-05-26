@@ -1,16 +1,14 @@
 
 <section class="services">
   <div class="headingwhite">
-    <h2>Experiencia</h2>
+    <h2>Proyectos</h2>
   </div>
   <div>
-    <div style="font-size:1.5rem; height: 80px;">
-        <span> AgendaLive</span>
-        <span class="example-spacer"></span>
-        <button mat-raised-button >Agregar experiencia</button>
-    </div>
-
-</div>
+    <button mat-raised-button class="btn btn-outline-light btn-sm" 
+    (click)="agregarProyecto()" *ngIf="isAdmin" >
+    <i class="fa-solid fa-plus"></i>  Agregar Proyecto</button>
+  </div>
+      
 
   <div class="content">
     
@@ -23,10 +21,10 @@
 
             <div class="botones">
             <td *ngIf="isAdmin">
-              <button class="btn btn-outline-warning">
+              <button class="btn btn-outline-warning" routerLink="/editarproyecto/{{proyecto.id}}">
               <i class="far fa-edit"></i></button></td>
 
-            <td *ngIf="isAdmin"><button class="btn btn-outline-danger" 
+            <td *ngIf="isAdmin"><button class="btn btn-outline-danger" (click)="borrar(proyecto.id)"
               ><i class="far fa-trash-alt"></i></button></td>
             </div>
           </div>

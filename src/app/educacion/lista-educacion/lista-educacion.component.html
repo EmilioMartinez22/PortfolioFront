@@ -1,24 +1,23 @@
 <section class="services">
   <div class="headingwhite">
-    <h2>Educación</h2>
-  </div>
-  <div>
-    <div style="font-size:1.5rem; height: 80px;">
-        <span> AgendaLive</span>
-        <span class="example-spacer"></span>
-        <button mat-raised-button class="btn btn-outline-success btn-lg" (click)="agregarEducacion()" >Agregar Educacion</button>
+    <h2><span>E</span>ducación<span>.</span></h2>
+    <div>
+      <button mat-raised-button class="btn btn-outline-light btn-sm" 
+      (click)="agregarEducacion()" *ngIf="isAdmin" >
+      <i class="fa-solid fa-plus"></i>  Agregar Educacion</button>
     </div>
 
-</div>
+  </div>
+
 
   <div class="content">
     
           <div class="servicesBx" *ngFor="let educacion of titulos">
             <img src="{{educacion.imagenUrl}}">
-            <h1>{{educacion.institucion}}</h1>
-            <h4>{{educacion.descripcion}}</h4>
-            <h4>{{educacion.entrada}}</h4>
-            <h4>{{educacion.salida}}</h4>
+            <h2>{{educacion.institucion}}</h2>
+            <p>{{educacion.descripcion}}</p>
+            <p>{{educacion.entrada}}</p>
+            <p>{{educacion.salida}}</p>
 
             <div class="botones">
             <td *ngIf="isAdmin">

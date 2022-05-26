@@ -1,29 +1,30 @@
+<div class="fondo">
 <div class="formulario">
     <div class="cuerpo-fomulario">
         <h3>Nueva Educacion</h3>
     <form (ngSubmit)="CrearEducacion()" novalidate #f="ngForm">
         <div class="form-group">
-            <label class="label" for="empresa">Institucion</label>
+            <label class="label" for="empresa">Institucion</label><br>
             <input type="text" class="formcontrol" id="nombre" name="nombre"
             [(ngModel)]="nombre" required>
         </div>
         <div class="form-group">
-            <label class="label" for="descripcion">Descripcion</label>
+            <label class="label" for="descripcion">Descripcion</label><br>
             <input type="text" class="formcontrol" id="descripcion" name="descripcion"
             [(ngModel)]="descripcion" required>
         </div>
         <div class="form-group">
-            <label  class="label" for="imagenUrl">ImagenUrl</label>
+            <label  class="label" for="imagenUrl">ImagenUrl</label><br>
             <input type="text" class="formcontrol" id="imagenUrl" name="imagenUrl"
             [(ngModel)]="imagenUrl" required>
         </div>
         <div class="form-group">
-            <label class="label" for="entrada">Año de ingreso</label>
+            <label class="label" for="entrada">Año de ingreso</label><br>
             <input type="number" class="formcontrol" id="entrada" name="entrada"
             [(ngModel)]="entrada" required>
         </div>
         <div class="form-group">
-            <label class="label" for="salida">Año de Salida</label>
+            <label class="label" for="salida">Año de Salida</label><br>
             <input type="number" class="formcontrol" id="salida" name="salida"
             [(ngModel)]="salida" required>
         </div>
@@ -32,7 +33,8 @@
             <i class="fa-solid fa-plus"></i>  Enviar</button>
         </mat-dialog-actions>
        
-    </form>
+    </form><br>
         <button mat-button class="cancelar btn btn-outline-danger btn-block" (click)="cancelar()">
             <i class="fas fa-arrow-alt-circle-left"></i>  Cancelar</button>
     </div>
+</div>

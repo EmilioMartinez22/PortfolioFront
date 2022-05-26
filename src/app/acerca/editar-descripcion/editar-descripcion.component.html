@@ -1,0 +1,18 @@
+<div class="container" *ngIf="persona">
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <form (ngSubmit)="editarPersona()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label class="label" for="descripcion">Descripcion</label>
+                    <input type="text" class="formcontrol" id="descripcion" name="descripcion"
+                    [(ngModel)]="persona.descripcion" required>
+                </div>
+                <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">
+                    <i class="fa-solid fa-pen"></i>Actualizar</button>
+                <button class="btn btn-outline-primary btn-block" routerLink="/">
+                    <i class="fas fa-arrow-alt-circle-left"></i>Volver</button>
+            </form>
+        </div>
+    </div>
+</div>
+

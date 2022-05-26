@@ -4,6 +4,11 @@
     top: 0px;
     
   }
+.logo
+{
+    max-width: 150px;
+    max-height: 80px;
+}
   
   .header
 {
@@ -63,12 +68,12 @@
 
 .bottom {
     background-color: #fff;
-    padding: 20px 100px;
+    padding: 20px 30px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 .bottom .logo
 {
-    color: #111;  
+    filter:invert(1);  
 }
 .bottom ul .titulo
 {
@@ -78,6 +83,63 @@
 {
     justify-content: center;
     align-items: center;
+}
+
+/*Responsivo*/
+@media (max-width: 800px)
+{
+    .header
+    {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 40px 100px;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    
+    }
+    .toggle  .menu
+{
+    display:flex;
+    flex-direction: column;
+    padding: 10px 10px;
+    text-align: center; 
+    width: 100%;
+    transition: 0.5s;
+    
+}
+}
+
+
+
+@media (max-width: 800px)
+{
+
+    
+    .header, .bottom 
+    {
+        padding: 20px 50px;
+        z-index: 1000;
+    }
+    
+    .bottom .menu
+    {
+    position: fixed;
+    top:120px;
+    left: 0;
+    display: block;
+    padding: 10px 10px;
+    text-align: center; 
+    width: 100%;
+    background:#fff;
+    transition: 1s;
+    border-top: 1px solid rgba(0,0,0,0.2);
+    }
+
 }
 
 

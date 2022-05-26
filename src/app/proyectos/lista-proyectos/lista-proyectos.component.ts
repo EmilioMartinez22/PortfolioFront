@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 
 import { ToastrService } from 'ngx-toastr';
 import { Proyecto } from 'src/app/models/proyecto';
 import { ProyectoService } from 'src/app/service/proyecto.service';
 import { TokenService } from 'src/app/service/token.service';
+import { NuevoProyectosComponent } from '../nuevo-proyectos/nuevo-proyectos.component';
 
 @Component({
   selector: 'app-lista-proyectos',
@@ -23,7 +25,8 @@ export class ListaProyectosComponent implements OnInit {
   constructor(
     private proyectoService: ProyectoService,
     private toastr: ToastrService,
-    private tokenService: TokenService
+    private tokenService: TokenService,
+    public dialog: MatDialog
     ) { }
 
   ngOnInit() {
@@ -61,6 +64,14 @@ export class ListaProyectosComponent implements OnInit {
         });
       }
     );
+  }
+
+  agregarProyecto(): void {
+    const dialogRef = this.dialog.open(NuevoProyectosComponent, {restoreFocus: false});
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
   }
 
 }

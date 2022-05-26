@@ -1,6 +1,6 @@
 section
 {
-    padding: 100px;
+    padding: 50px;
 }
 .heading
 {
@@ -36,4 +36,37 @@ w50
 img
 {
     max-width: 100%;
+}
+@media(max-width:800px)
+{
+section
+{
+    min-height: 700px;
+}
+.responsive
+{
+    margin-top: 180px;
+}
+.content
+{
+display: flex;
+flex-direction: column;
+justify-content:flex-end;
+}
+.contentBx
+{
+text-align: center;
+}
+}
+@media(min-width:801px)
+{
+
+.responsive
+{
+    margin-top: 80px;
+}
+.contentBx
+{
+text-align: center;
+}
 }

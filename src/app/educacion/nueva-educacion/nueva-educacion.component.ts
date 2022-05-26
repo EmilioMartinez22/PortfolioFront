@@ -23,7 +23,7 @@ export class NuevaEducacionComponent implements OnInit {
     private educacionService: EducacionService,
     private toastr: ToastrService,
     private router: Router,
-    public dialogRef: MatDialogRef<ListaEducacionComponent>,
+    public dialogRef: MatDialogRef<ListaEducacionComponent>
   ) { }
 
   ngOnInit(): void {

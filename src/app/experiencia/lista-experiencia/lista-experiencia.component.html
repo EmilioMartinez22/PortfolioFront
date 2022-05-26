@@ -2,15 +2,11 @@
   <div class="headingwhite">
     <h2>Experiencia</h2>
   </div>
-  <div>
-    <div style="font-size:1.5rem; height: 80px;">
-      <div style="font-size:1.5rem; height: 80px;">
-        <button mat-raised-button class="btn btn-outline-success btn-lg" (click)="agregarExperiencia()">
-          <i class="fa-solid fa-plus"></i>  Agregar Experiencia</button>
-    </div>
-    </div>
-
-</div>
+      <div>
+        <button mat-raised-button class="btn btn-outline-light btn-sm" 
+        (click)="agregarExperiencia()" *ngIf="isAdmin" >
+        <i class="fa-solid fa-plus"></i>  Agregar Experiencia</button>
+      </div>
 
   <div class="content">
     

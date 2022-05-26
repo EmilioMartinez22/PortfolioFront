@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-banner',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BannerComponent implements OnInit {
 
+  isMenor:boolean;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+
+  @HostListener('window:resize', [])
+  onResize(): void {
+    if ( window.innerWidth < 860) {
+      this.isMenor = true;
+    } else {
+      this.isMenor = false;
+    }
   }
 
 }

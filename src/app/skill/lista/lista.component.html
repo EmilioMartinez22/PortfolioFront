@@ -3,10 +3,11 @@
     <h2>Skills</h2>
   </div>
   <div>
-    <div style="font-size:1.5rem; height: 80px;">
-        <button mat-raised-button class="btn btn-outline-success btn-lg" (click)="agregarSkill()">
-          <i class="fa-solid fa-plus"></i>  Agregar Skill</button>
-    </div>
+   
+        <button mat-raised-button class="btn btn-outline-light btn-sm" 
+        (click)="agregarSkill()" *ngIf="isAdmin" >
+        <i class="fa-solid fa-plus"></i>  Agregar Skill</button>
+    
 
 </div>
 
@@ -15,6 +16,7 @@
           <div class="servicesBx" *ngFor="let skill of skills">
             <img src="{{skill.imagenUrl}}">
             <h2>{{skill.nombre}}</h2>
+            <progress id="file" max="100" value="{{skill.porcentaje}}"></progress>
             <h1>{{skill.porcentaje}}</h1>
             <div class="botones">
             <td *ngIf="isAdmin">

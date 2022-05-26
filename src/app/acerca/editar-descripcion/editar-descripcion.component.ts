@@ -1,21 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { Proyecto } from 'src/app/models/proyecto';
-import { ProyectoService } from 'src/app/service/proyecto.service';
+import { Persona } from 'src/app/models/persona';
+import { PersonaService } from 'src/app/service/persona.service';
 
 @Component({
-  selector: 'app-editar-proyectos',
-  templateUrl: './editar-proyectos.component.html',
-  styleUrls: ['./editar-proyectos.component.css']
+  selector: 'app-editar-descripcion',
+  templateUrl: './editar-descripcion.component.html',
+  styleUrls: ['./editar-descripcion.component.css']
 })
+export class EditarDescripcionComponent implements OnInit {
 
-export class EditarProyectosComponent implements OnInit {
-
-  proyecto: Proyecto = null;
+  persona: Persona = null;
 
   constructor(
-    private proyectoService: ProyectoService, 
+    private personaService: PersonaService, 
     private activatedRoute: ActivatedRoute,
     private toastr: ToastrService,
     private router: Router
@@ -23,9 +22,9 @@ export class EditarProyectosComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.params['id'];
-    this.proyectoService.detail(id).subscribe(
+    this.personaService.detail(id).subscribe(
       data => {
-        this.proyecto = data;
+        this.persona = data;
       },
       err => {
         this.toastr.error(err.error.mensaje, 'Fail', {
@@ -36,11 +35,11 @@ export class EditarProyectosComponent implements OnInit {
     );
   }
 
-  editarProyecto(): void {
+  editarPersona(): void {
     const id = this.activatedRoute.snapshot.params['id'];
-    this.proyectoService.update(id, this.proyecto).subscribe(
+    this.personaService.update(id, this.persona).subscribe(
       data => {
-        this.toastr.success('Proyecto Actualizado', 'OK', {
+        this.toastr.success('Datos Actualizados', 'OK', {
           timeOut: 3000, positionClass: 'toast-top-center'
         });
         this.router.navigate(['/']);
@@ -57,6 +56,5 @@ export class EditarProyectosComponent implements OnInit {
     this.router.navigate(['/']);
   }
 
-
-
 }
+

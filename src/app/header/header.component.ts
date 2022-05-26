@@ -11,6 +11,7 @@ import { TokenService } from '../service/token.service';
 
 export class HeaderComponent implements OnInit {
 
+  
   isBottom: boolean;  
   isLogged = false;
 
@@ -37,5 +38,7 @@ export class HeaderComponent implements OnInit {
       this.isBottom = false;
     }
   }
+  
+
 
 }

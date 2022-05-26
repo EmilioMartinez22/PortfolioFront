@@ -1,1 +1,20 @@
-<p>footer works!</p>
+<section class="footer">
+<h2>Datos de contacto</h2>
+<div class="about" *ngFor ="let persona of personas">
+    <div class="heading">
+        <h2>{{persona.nombre}}</h2>
+        <div class="botones">
+            <td *ngIf="isAdmin">
+              <button class="btn btn-outline-warning" routerLink="/editarpersona/{{persona.id}}">
+            <i class="far fa-edit"></i></button></td>
+        </div>
+        
+    </div>
+    <div class="content">
+        <div class="contentBx w50">
+               <h3>{{persona.email}}</h3>
+               <h3>{{persona.telefono}}</h3>
+        </div>
+    </div>
+</div>
+</section>

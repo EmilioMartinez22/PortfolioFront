@@ -1,7 +1,7 @@
 .services
 {
     padding: 5px;
-    background: #fff;
+    background: #660000;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -26,12 +26,6 @@
 
     padding: 40px 20px;
     background: #fff;
-    border-top: 2px;
-    border-left: 2px;
-    border-right:5px;
-    border-bottom: 5px;
-    border-color: #054132;
-    border-style: solid;
     color: #111;
     max-width: 340px;
     margin: 20px;
@@ -40,7 +34,8 @@
 }
 .services .content .servicesBx:hover
 {
-    background: #ff5c;
+    background: #222;
+    color:#fff;
 }
 
 

@@ -1,0 +1,28 @@
+<div class="container" *ngIf="persona">
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <form (ngSubmit)="editarPersona()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label class="label" for="nombre">Nombre</label><br>
+                    <input type="text" class="formcontrol" id="nombre" name="nombre"
+                    [(ngModel)]="persona.nombre" required>
+                </div>
+                <div class="form-group">
+                    <label class="label" for="entrada">Email</label><br>
+                    <input type="text" class="formcontrol" id="email" name="email"
+                    [(ngModel)]="persona.email" required>
+                </div>
+                <div class="form-group">
+                    <label class="label" for="salida">Telefono</label><br>
+                    <input type="number" class="formcontrol" id="telefono" name="telefono"
+                    [(ngModel)]="persona.telefono" required>
+                </div>
+                <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">
+                    <i class="fa-solid fa-pen"></i>Actualizar</button>
+                <button class="btn btn-outline-primary btn-block" routerLink="/">
+                    <i class="fas fa-arrow-alt-circle-left"></i>Volver</button>
+            </form>
+        </div>
+    </div>
+</div>
+

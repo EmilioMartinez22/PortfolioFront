@@ -1,17 +1,29 @@
 .services
 {
     padding: 5px;
-    background: #2177b3;
+    background: #111;
     justify-content: center;
     align-items: center;
-    text-align: center;
-
-    
+    text-align: center;  
 }
 .headingwhite
 {
     color: #fff;
-    
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;  
+}
+.headingwhite h2
+{
+    font-size: 50px;
+}
+.headingwhite span
+{
+   color:#81b71a; 
+}
+.headingwhite .boton
+{
+font-size: 8px;
 }
 .services .content
 {
@@ -23,36 +35,44 @@
 }
 .services .content .servicesBx
 {
-
+    border-radius: 5px;
     padding: 40px 20px;
-    background: #fff;
+    background: #81b71a;
     color: #111;
-    max-width: 340px;
+    width: 300px;
+    max-height: 250px;
     margin: 20px;
     text-align: center;
     transition: 0.5s ;
 }
 .services .content .servicesBx:hover
 {
-    background: #222;
-    color: #fff;
+    background: #fff;
+    color:#2177b3 ;
+    font-weight: 300;
 }
 
 
 
 .services .content .servicesBx img
 {
-    max-width: 200px;
-    max-height: 200px ;
+    max-width: 50px;
+    max-height: 50px;
+    border-radius:5px;
 }
-.services .content .servicesBx img:hover
-{
-    filter: invert(1);
-}
+
 .services .content .servicesBx h2
 {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600px;
+    margin-top: 3px;
+    margin-bottom: 0px;
+}
+.services .content .servicesBx p
+{
+    margin-bottom: 0px;
+    font-size:14px;
+    font-weight: 600;
 }
 .botones
 {

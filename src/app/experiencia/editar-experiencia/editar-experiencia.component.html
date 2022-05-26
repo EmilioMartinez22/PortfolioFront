@@ -4,27 +4,27 @@
         <div class="col-md-4 mx-auto">
             <form (ngSubmit)="editarExperiencia()" novalidate #f="ngForm">
                 <div class="form-group">
-                    <label class="label" for="empresa">Empresa</label>
+                    <label class="label" for="empresa">Empresa</label><br>
                     <input type="text" class="formcontrol" id="empresa" name="empresa"
                     [(ngModel)]="experiencia.empresa" required>
                 </div>
                 <div class="form-group">
-                    <label class="label" for="descripcion">Descripcion</label>
+                    <label class="label" for="descripcion">Descripcion</label><br>
                     <input type="text" class="formcontrol" id="descripcion" name="descripcion"
                     [(ngModel)]="experiencia.descripcion" required>
                 </div>
                 <div class="form-group">
-                    <label  class="label" for="imagenUrl">ImagenUrl</label>
+                    <label  class="label" for="imagenUrl">ImagenUrl</label><br>
                     <input type="text" class="formcontrol" id="imagenUrl" name="imagenUrl"
                     [(ngModel)]="experiencia.imagenUrl" required>
                 </div>
                 <div class="form-group">
-                    <label class="label" for="entrada">Año de ingreso</label>
+                    <label class="label" for="entrada">Año de ingreso</label><br>
                     <input type="number" class="formcontrol" id="entrada" name="entrada"
                     [(ngModel)]="experiencia.entrada" required>
                 </div>
                 <div class="form-group">
-                    <label class="label" for="salida">Año de Salida</label>
+                    <label class="label" for="salida">Año de Salida</label><br>
                     <input type="number" class="formcontrol" id="salida" name="salida"
                     [(ngModel)]="experiencia.salida" required>
                 </div>

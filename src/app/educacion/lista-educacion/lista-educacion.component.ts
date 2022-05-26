@@ -22,7 +22,7 @@ export class ListaEducacionComponent implements OnInit {
     private educacionService: EducacionService,
     private toastr: ToastrService,
     private tokenService: TokenService,
-    public dialog: MatDialog,
+    public dialog: MatDialog
     ) { }
 
   ngOnInit() {

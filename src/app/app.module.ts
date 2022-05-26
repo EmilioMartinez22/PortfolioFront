@@ -38,8 +38,10 @@ import { ListaProyectosComponent } from './proyectos/lista-proyectos/lista-proye
 import { FooterComponent } from './footer/footer.component';
 import { BannerComponent } from './banner/banner.component';
 import { FotoComponent } from './foto/foto.component';
-import { ModalComponent } from './modal/modal.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { EditarPersonaComponent } from './foto/editar-persona/editar-persona.component';
+import { EditarFooterComponent } from './footer/editar-footer/editar-footer.component';
+import { EditarDescripcionComponent } from './acerca/editar-descripcion/editar-descripcion.component';
 
 
 
@@ -71,7 +73,9 @@ import {MatDialogModule} from '@angular/material/dialog';
     FooterComponent,
     BannerComponent,
     FotoComponent,
-    ModalComponent
+    EditarPersonaComponent,
+    EditarFooterComponent,
+    EditarDescripcionComponent
   ],
   imports: [
     BrowserModule,

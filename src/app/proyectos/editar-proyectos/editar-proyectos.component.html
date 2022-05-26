@@ -1,1 +1,33 @@
-<p>editar-proyectos works!</p>
+<div class="container" *ngIf="proyecto">
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <form (ngSubmit)="editarProyecto()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label class="label" for="institucion">Institucion</label><br>
+                    <input type="text" class="formcontrol" id="institucion" name="institucion"
+                    [(ngModel)]="proyecto.institucion" required>
+                </div>
+                <div class="form-group">
+                    <label class="label" for="descripcion">Descripcion</label><br>
+                    <input type="text" class="formcontrol" id="descripcion" name="descripcion"
+                    [(ngModel)]="proyecto.descripcion" required>
+                </div>
+                <div class="form-group">
+                    <label  class="label" for="imagenUrl">ImagenUrl</label><br>
+                    <input type="text" class="formcontrol" id="imagenUrl" name="imagenUrl"
+                    [(ngModel)]="proyecto.imagenUrl" required>
+                </div>
+                <div class="form-group">
+                    <label class="label" for="entrada">Año de ingreso</label><br>
+                    <input type="number" class="formcontrol" id="anio" name="anio"
+                    [(ngModel)]="proyecto.anio" required>
+                </div>
+                <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">
+                    <i class="fa-solid fa-pen"></i>Actualizar</button>
+                <button class="btn btn-outline-primary btn-block" routerLink="/">
+                    <i class="fas fa-arrow-alt-circle-left"></i>Volver</button>
+            </form>
+        </div>
+    </div>
+</div>
+
