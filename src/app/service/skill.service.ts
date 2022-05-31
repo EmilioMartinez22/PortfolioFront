@@ -9,7 +9,7 @@ import { Skill } from '../models/skill';
 export class SkillService {
 
 
-  skillURL = 'http://localhost:8080/skill/';
+  skillURL = 'https://cryptic-oasis-50694.herokuapp.com/skill/';
 
   constructor(private httpClient: HttpClient) { }
 

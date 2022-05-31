@@ -84,4 +84,14 @@ span
 
 }
 
+@media(max-width:500px)
+{
 
+.banner
+{
+    padding: 10px;
+    max-height: 40vh;
+}
+
+
+}

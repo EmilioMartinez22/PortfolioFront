@@ -10,7 +10,7 @@ import { JwtDTO } from '../models/jwt-dto';
 })
 export class AuthService {
 
-  authURL = 'http://localhost:8080/auth/';
+  authURL = 'https://cryptic-oasis-50694.herokuapp.com/auth/';
 
   constructor(private httpClient: HttpClient) { }
 

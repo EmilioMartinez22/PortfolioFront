@@ -17,10 +17,6 @@ import { MenuComponent } from './menu/menu.component';
 import { IndexComponent } from './index/index.component';
 import { RegistroComponent } from './auth/registro/registro.component';
 import { LoginComponent } from './auth/login/login.component';
-import { EditarProductoComponent } from './producto/editar-producto/editar-producto.component';
-import { ListaProductoComponent } from './producto/lista-producto/lista-producto.component';
-import { DetalleProductoComponent } from './producto/detalle-producto/detalle-producto.component';
-import { NuevoProductoComponent } from './producto/nuevo-producto/nuevo-producto.component';
 import { ListaComponent } from './skill/lista/lista.component';
 import { EditarComponent } from './skill/editar/editar.component';
 import { NuevoComponent } from './skill/nuevo/nuevo.component';
@@ -48,10 +44,6 @@ import { EditarDescripcionComponent } from './acerca/editar-descripcion/editar-d
 @NgModule({
   declarations: [
     AppComponent,
-    ListaProductoComponent,
-    DetalleProductoComponent,
-    NuevoProductoComponent,
-    EditarProductoComponent,
     LoginComponent,
     RegistroComponent,
     MenuComponent,

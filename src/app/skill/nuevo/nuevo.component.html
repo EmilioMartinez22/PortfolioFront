@@ -18,10 +18,10 @@
         <input type="number" class="formcontrol" id="porcentaje" name="porcentaje"
         [(ngModel)]="porcentaje" required>
     </div>
-    <mat-dialog-actions>
+    <div>
     <button mat-button class=" enviar btn btn-outline-success btn-block" (click)="cancel()" [disabled]="!f.valid">
         <i class="fa-solid fa-plus"></i>  Enviar</button>
-    </mat-dialog-actions>
+    </div>
    
 </form><br>
     <button mat-button class="cancelar btn btn-outline-danger btn-block" (click)="cancel()">
